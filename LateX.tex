@@ -1,0 +1,302 @@
+\usepackage{movie15}
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\title{Réseau Neuronal Convolutif}
+\author{by Bilal K., Lucas R., Renaud D., Alex P. }
+%Bilal Kadi, Lucas Rouquairol, Renaud DEROUBAIX, Alex Poldrugo
+\centering
+\date{Avril 2020}
+\begin{document}
+\maketitle
+\begin{frame}{Contenu}
+    \begin{itemize}
+        \item Explication d'un Réseau neuronal.
+        \item La partie convolutive du réseau neuronal.
+        \item Explication de l'entraînement du réseau neuronal.
+        \item Partie technique
+    \end{itemize}
+\end{frame}
+\begin{frame}{Contexte}
+    \begin{itemize}
+        \item Reconnaissance de chiffre sur image
+        \item Explication grossière
+        \item Orienté informaticien 
+        \item Python
+    \end{itemize}
+\end{frame}
+\begin{frame}{Réseau neuronal}
+    \framesubtitle{Base : le cerveau et ses neurones}
+        \includegraphics[height=5.5cm]{images/cerveauneurone.jpg}
+        \centering
+\end{frame}
+\begin{frame}{Réseau neuronal}
+    \framesubtitle{Comment ça marche? Schéma:}
+        \includegraphics[height=7.5cm]{images/reseauneuronal1.jpg}
+        \centering
+\end{frame}
+\begin{frame}{Réseau neuronal}
+    \framesubtitle{Pour notre exemple: reconnaissance d'un chiffre sur une image}
+        \includegraphics[height=7.5cm]{images/reseauneuronal2exemple.jpg}
+        \centering
+\end{frame}
+
+
+
+
+\begin{frame}
+\huge{\centerline{CONVOLUTION ET POOLING}}
+\end{frame}
+
+
+\begin{frame}{Convolution}
+    \includegraphics[height = 4cm]{images/Feature_Learning.jpeg}
+\end{frame}
+
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (2).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (3).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (4).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (5).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (6).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (7).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (8).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (9).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (10).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (11).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (12).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 1}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/Ex_4_n°1 (13).png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P1.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P2.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P3.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P4.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P5.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P6.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P8.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P9.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P10.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P11.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P12.png}
+\end{frame}
+
+\begin{frame}{Convolution : Exemple 12 x 12 Filtre 2}
+    \includegraphics[height = 6cm]{images/Ex_sur_4/P13.png}
+\end{frame}
+
+\begin{frame}{Pooling}
+    \includegraphics[height = 4cm]{images/Feature_Learning.jpeg}
+\end{frame}
+
+\begin{frame}{Pooling : Exemple}
+    \includegraphics[height = 6cm]{images/pooling.png}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+    
+        \item Descente de gradient : méthode de représentation d'un neurone
+        \item CNN = (Convolutional neural network) (RNC)
+        \item Convolution = Ensemble de filtres qui scannent l'images
+        \item + de convolutions = + de précision
+        
+    \end{itemize}
+\end{frame}
+
+
+
+
+%Bilal
+
+\begin{frame}{Explication de l'entraînement d'un réseau neuronal}
+\framesubtitle{Quelles sont les différentes étapes de l'entraînement ?}
+\begin{itemize}
+    \includegraphics[height = 6cm] {images/entrainement1.jpeg}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Base de données}
+    \item Contient toutes les images, divisée en 2 parties :
+    \begin{block}{Base de données d'entraînement}
+        Cette partie servira à l'entraînement du CNN
+    \end{block}
+    \begin{block} {Base de données de validation}
+        Cette base de données sert à évaluer le modèle
+    \end{block}
+    Images étiquetées au préalables selon les catégories
+    
+\end{frame}
+\begin{frame}{L'apprentissage}
+\framesubtitle{Initialisation}
+    \includegraphics[height = 6cm]{images/initialisation.png}
+   
+\end{frame}
+
+\begin{frame}{Les couches cachées (hidden layer)}
+    \includegraphics[height=6cm]{images/secondlayer.png}
+\end{frame}
+
+\begin{frame}{Gradient}
+    \begin{itemize}
+        \item Au début : résultats aléatoires
+        \item On évalue donc le coût
+        
+    \end{itemize}
+    \includegraphics[height = 6cm]{images/cout1.png}
+\end{frame}
+
+\begin{frame}{Coût}
+    \includegraphics[height = 6cm]{images/cout2.png}
+\end{frame}
+
+\begin{frame}{Calcul du gradient}
+    \includegraphics[height = 6cm]{images/sigmoid.png}
+\end{frame}
+
+
+\begin{frame}{Propagation du gradient}
+    \includegraphics[height = 6cm]{images/propagation.png}
+\end{frame}
+
+
+
+\begin{frame}{Sur-apprentissage et sous-apprentissage}
+  
+  \begin{itemize}
+      \item Modèle aussi performant sur les données d'entraînement que celles de validation
+      \item Modèle performant sur les images d'entraînement mais moins sur les données de validation : sur-apprentissage 
+      \item Modèle non performant ni sur l'entraînement ni sur celles de validation : sous-entraînement
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Partie technique}
+    \item Motivation
+    \item API de machine learning
+    \item Keras
+    \item Exemple de code
+\end{frame}
+\begin{frame}{Motivation}
+    \framesubtitle{Utilisation du CNN}
+        \begin{itemize}
+            \item voiture auto guidée
+            \item reconnaissance facial
+            \item soin médical, reconnaissance de maladie sur radio
+            \item marquage d'image
+        \end{itemize}
+\end{frame}
+\begin{frame}{Motivation}
+\framesubtitle{CNN à la portée de tous}
+    \begin{itemize}
+        \item mode d'utilisation de plus en plus accessible
+        \item sujet de plus en plus répandu 
+        \item des cours en ligne facile à apprendre
+        \item API facile d'utilisation 
+    \end{itemize}
+\end{frame}
+\begin{frame}{API de machine learning}
+    \begin{block}{API?}
+        API est l'abréviation de "Application Programming Interface", interface de programmation applicative en français. \\
+        D'après Wikipédia: " c'est un ensemble normalisé de classes, de méthodes, de fonctions et de constantes qui sert de façade par laquelle un logiciel offre des services à d'autres logiciels." 
+    \end{block}
+    \begin{itemize}
+        \item Tensorflow
+        \item Keras
+        \item Theano
+        \item Microsoft Cognitive Toolkit
+        \item Apache MXNet
+        \item PyTorch
+    \end{itemize}
+\end{frame}
+\begin{frame}{Keras}
+    Keras est une interface de programmation applicative de haut niveau travaillant par dessus les API TensorFlow, Theano ou CNTK. C'est-à-dire qu'il faut avoir installé l'une de ces librairies dans son environnement de programmation pour utiliser Keras.
+\end{frame}
+\begin{frame}{Exemple de Code}
+\framesubtitle{créer les couches convolutif et neuronals}
+    \includegraphics [height = 6cm]{images/CNNBuild.png}
+\end{frame}
+\begin{frame}{Exemple de Code}
+\framesubtitle{entraînement du réseau}
+    \includegraphics[height = 4cm]{images/CNNTRAIN.png}
+\end{frame}
+
+\begin{frame}{Sources}
+    \begin{itemize}
+        
+        \item https://fr.wikipedia.org/wiki/R\%C3\%A9seau\_neuronal\_convolutif
+        \item udemy (deep learning A-Z)
+        \item keras.io
+        \item https://www.youtube.com/watch?v=8qL2lSQd9L8
+        \item[height ] https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1\_67000Dx\_ZCJB-3pi
+        \url{https://www.natural-solutions.eu/blog/entrainement-dun-rseau-de-neurones-convolutif}
+    \end{itemize}
+\end{frame}
+\end{document}
+
+
